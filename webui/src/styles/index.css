@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Iceland", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background: url("../components/background.png") no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-position: center;
+}
+.wrapper {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px; 
+}
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 45px 0 20px;
+    outline: none;
+    transition: 0.3s ease;
+}
+.input-box input::placeholder {
+    color: #ddd;
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+.remember label input {
+    accent-color: #00ff88;
+    margin-right: 5px;
+}
+.remember a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.remember a:hover {
+    color: #00ff88;
+    text-decoration: underline;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #fff;
+    color: #006400;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.btn:hover {
+    background: #00ff88;
+    color: #000;
+}
+.register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.register-link p a:hover {
+    color: #00ff88;
+    text-decoration: underline;
+}
+.matrix-left,
+.matrix-right {
+    position: fixed;
+    top: -100%;
+    width: 120px; 
+    height: 200%; 
+    overflow: hidden;
+    z-index: 0; 
+    color: #00ff88;
+    font-family: monospace;
+    font-size: 18px;
+    opacity: 0.25;
+    white-space: pre;
+    line-height: 16px;
+    text-shadow: 0 0 5px #00ff88;
+}
+.matrix-left {
+    left: 0;
+    animation: matrixFlow 8s linear infinite;
+}
+.matrix-right {
+    right: 0;
+    animation: matrixFlow 8s linear infinite reverse;
+}
+@keyframes matrixFlow {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
